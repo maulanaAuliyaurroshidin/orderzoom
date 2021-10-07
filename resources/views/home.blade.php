@@ -71,7 +71,7 @@
         </ul>
         <span class="pricing-price">*Call for price</span>
         <p class="pricing-detail">*Harga sudah termasuk PPN 10%</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20meeting%20100%20peserta" class="pricing-button">Pesan Sekarang</a>
+        <a href="/order" class="pricing-button">Pesan Sekarang</a>
       </div>
 
       <div class="pricing-plan">
