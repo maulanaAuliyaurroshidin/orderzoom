@@ -62,9 +62,7 @@ class OrderController extends Controller {
             }
             public function order()
             {
-                //$tgl = DB::table('pesan')->where('tanggal')->get();
-                //return view('index',['tbl_siswa' => $tgl]);
-                //dd($tgl);
-                return view('order');
+                $tgl = DB::table('pesan')->whereNotNull('tanggal')->get();
+                return view('order',['tanggal' => $tgl]);
             }
 }

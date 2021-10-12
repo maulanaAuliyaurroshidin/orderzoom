@@ -12,6 +12,8 @@
                             <div class="row">
                                 <div class="col text-center">
                                     <h1>Form Pemesanan</h1>
+                                
+                                
                                     <!-- <p class="text-h3">Far far away, behind the word mountains, far from the countries
                                         Vokalia and Consonantia.</p> -->
                                 </div>
@@ -52,9 +54,23 @@
                                     <input type="text" class="form-control date" name="tanggal" id="datepicker" required>
                                 </div>
                                 <script type="text/javascript">
-                            $(function () { 
-                                $('#datepicker').datepicker({ minDate:new Date() });
-                                });</script>
+
+<?php 
+                                    foreach($tanggal as $tgl)
+                                   {
+                                    $lists[] = $tgl->tanggal;
+                                   }
+                                   $lists2 = json_encode($lists);
+                                ?>
+                            var array = @json($lists);
+                            $('#datepicker').datepicker({
+                                multidate: 1, minDate :moment().add('d', 1).toDate(),
+                                beforeShowDay: function(date){
+                                    var string = jQuery.datepicker.formatDate('mm\/dd\/yy', date);
+                                    return [ array.indexOf(string) == -1 ]
+                                }
+                            });
+                                </script>
                             </div>
 
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
