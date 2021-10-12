@@ -18,9 +18,11 @@
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
                     <p>
                     <div class="row justify-content-center">
-                            
-                    <a href="#" style="margin-bottom : 5px;" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload Bukti Sekarang</a>
-                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Upload Nanti</a>
+                            <div class="form-group">
+                                <label for="images">Upload Bukti</label>
+                            <input type="file" name="images[]" id='images' class="form-control w-50 m-auto">
+                            </div>
+                            <input type="submit" class="btn btn-success" style="margin-top:5px;" value="Upload" />
                         </form>
 
                         <!-- <div class="form-group">
