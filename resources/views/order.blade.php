@@ -55,12 +55,17 @@
                                 </div>
                                 <script type="text/javascript">
 
-<?php 
+                                <?php 
+                                if($tanggal->isEmpty())
+                                {
+                                }
+                                else
+                                {
                                     foreach($tanggal as $tgl)
                                    {
                                     $lists[] = $tgl->tanggal;
                                    }
-                                   $lists2 = json_encode($lists);
+                                }
                                 ?>
                             var array = @json($lists);
                             $('#datepicker').datepicker({
