@@ -23,3 +23,11 @@ Route::get('/order', function () {
 });
 
 Route::post('/order/save', 'OrderController@save');
+
+
+Route::get('/order/pembayaran', 'OrderController@pembayaran');
+Route::get('/session/set', 'OrderController@storeSessionData');
+Route::get('/session/get', 'OrderController@getSessionData');
+Route::get('/session/delete', 'OrderController@deleteSessionData');
+
+
