@@ -51,15 +51,10 @@
                                     <label class="form-label">Tanggal Peminjaman</label>
                                     <input type="text" class="form-control date" name="tanggal" id="datepicker" required>
                                 </div>
-                                <script id="rendered-js">
-                                    $('.date').datepicker({
-                                        multidate: 1, minDate :moment().add('d', 1).toDate(),
-                                        format: 'dd-mm-yyyy',
-                                    });
-									
-									
-									
-                                </script>
+                                <script type="text/javascript">
+                            $(function () { 
+                                $('#datepicker').datepicker({ minDate:new Date() });
+                                });</script>
                             </div>
 
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>

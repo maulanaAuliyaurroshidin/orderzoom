@@ -55,4 +55,16 @@ class OrderController extends Controller {
                 session()->forget('kde');
                 echo 'delete';
             }
+            public function uploadbukti($id)
+            { 
+                $upload = DB::table('pesan')->where('id',$id)->get(); 
+                dd($upload);
+            }
+            public function order()
+            {
+                //$tgl = DB::table('pesan')->where('tanggal')->get();
+                //return view('index',['tbl_siswa' => $tgl]);
+                //dd($tgl);
+                return view('order');
+            }
 }
