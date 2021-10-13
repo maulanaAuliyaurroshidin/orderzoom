@@ -13,8 +13,9 @@
                     <h5 class="card-title">123123123</h5>
                     <h6 class="card-subtitle mb-2 text-muted">A/N PT.Radnet Digital Indonesia</h6>
                     <p class="card-text">Mandiri Syariah</p>
+                    <p class="lead">Nama <strong>{{$k->nama}}</strong></p>
                     <p class="lead">Total Pembayaran Rp.<strong>123.123</strong></p>
-                    <p class="lead">Kode Pembayaran <strong>{{$p}}</strong></p>
+                    <p class="lead">Kode Pembayaran <strong>{{$k->id}}</strong></p>
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
                     <p>
                     <div class="row justify-content-center">

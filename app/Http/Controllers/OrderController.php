@@ -36,7 +36,14 @@ class OrderController extends Controller {
             public function pembayaran(Request $request)
             {
                 $kode_pesan = array('p'=>session()->get('kde'));
-                return view('pembayaran')->with($kode_pesan);
+                $db = DB::table('pesan')->where('id',$kode_pesan)->get();
+                foreach($db as $k)
+                {
+                    $k = array('k'=>$k);
+                    
+                }
+                //dd($k);
+                return view('pembayaran')->with($k)->with($kode_pesan);
             }
 
             public function getSessionData(Request $request)
@@ -59,15 +66,24 @@ class OrderController extends Controller {
             { 
                 
                 $kode_pesan = array('p'=>session()->get('kde'));
-                $upload = DB::table('pesan')->where('id',$id)->get(); 
-                return view('uploadbukti',['id' => $id])->with($kode_pesan);
+                $db = DB::table('pesan')->where('id',$id)->get(); 
+
+                foreach($db as $k)
+                {
+                    $k = array('k'=>$k);
+                    
+                }
+
+                return view('uploadbukti',['id' => $id])->with($kode_pesan)->with($k);
             }
             public function upload(Request $request)
             { 
                 DB::table('pesan')->where('id',$request->id)->update([
                     'bukti' => $request->bukti,
                 ]); 
-                dd($request->all());
+                //dd($request->all());
+                session()->forget('kde');
+                return view('uploadberhasil');
             }
             public function order()
             {
@@ -82,9 +98,15 @@ class OrderController extends Controller {
                     ->where('id','like',"%".$cari."%")
                     ->get();
                     $pp = array('p'=>$cari);
+
+                    foreach($pesan as $k)
+                {
+                    $k = array('k'=>$k);
+                    
+                }
                     //->paginate(10);
                     //dd($pp);
-                  return view('uploadbukti')->with($pp);
+                  return view('uploadbukti')->with($pp)->with($k);
             }  
             public function viewcari()
             {
