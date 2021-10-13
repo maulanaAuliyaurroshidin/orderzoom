@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
         <a class="navbar-brand"  href="/"><img style ="height : 60px;" src="/img/meeton2.png" alt=""></a>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,13 +16,13 @@
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" style="display:none;" href="/pages/contact">Contact Me</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link"style="display:none;" href="/pages/about">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pages/klien">Klien</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="/pages/cari">Pesanan Saya</a>
             </li>
         </ul>
     </div>
