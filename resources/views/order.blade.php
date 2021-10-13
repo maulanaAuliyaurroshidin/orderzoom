@@ -10,10 +10,10 @@
                 <form action="/order/save" method="POST">
                 {{ csrf_field() }} 
                     <div class="row justify-content-center">
-                        <div class="col-12 col-md-8 col-lg-8 col-xl-6 shadow p-3 mb-5 rounded">
+                        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
                             <div class="row">
                                 <div class="col text-center">
-                                    <h1 style="padding-top : 40px;">Form Pemesanan</h1>
+                                    <h1>Form Pemesanan</h1>
                                 
                                 
                                     <!-- <p class="text-h3">Far far away, behind the word mountains, far from the countries
