@@ -77,17 +77,18 @@ class OrderController extends Controller {
 
             public function cari(Request $request)
             {
-            
-                $kode_pesan = array('p'=>session()->get('kde'));
-                    $cari = $request->cari;
-             
-                        
+                $cari = $request->cari;
                     $pesan= DB::table('pesan')
                     ->where('id','like',"%".$cari."%")
                     ->get();
+                    $pp = array('p'=>$cari);
                     //->paginate(10);
-                    //dd($request->all());
-                return view('uploadbukti',['id' => $pesan]);
-                  //  return view('Topup',['Topup' => $Topup]);
+                    //dd($pp);
+                  return view('uploadbukti')->with($pp);
             }  
+            public function viewcari()
+            {
+                $kode_pesan = array('p'=>session()->get('kde'));
+                return view('pencarian')->with($kode_pesan);
+            }
 }

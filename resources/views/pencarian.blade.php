@@ -12,14 +12,14 @@
                 </div>
                 
                 <div class="card-body text-center">
-                <form action="/order/cari" method="GET"><label>Masukkan No Pembayaran anda</label>
+                <form action="/cari/pesanan"  method="GET"><label>Masukkan No Pembayaran anda</label>
                 <p>
 		<input type="text" name="cari" style="border-radius:20px;padding-left:15px; background-color:whitesmoke; border-style: none;margin-left:10px" value="{{ old('cari') }}" >
 	
                 
                     <div class="row justify-content-center">
                             
-                    <a href="/order/uploadbukti/{{$p}}" style="margin-bottom : 5px;" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload Bukti Sekarang</a>
+                    <button type="submit" style="margin-bottom : 5px;" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Cari</button>
                         </form>
                     </div>
                     </p>

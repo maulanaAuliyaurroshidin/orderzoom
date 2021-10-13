@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/pages/cari', function(){
-    return view('pencarian');
-});
 Route::get('/order', 'OrderController@order');
 
 Route::post('/order/save', 'OrderController@save');
@@ -34,5 +31,7 @@ Route::get('/order/uploadbukti/{id}', 'OrderController@uploadbukti');
 Route::post('/order/upload/{id}', 'OrderController@upload');
 
 
-Route::get('/order/cari','OrderController@cari');
+Route::get('/cari/pesanan','OrderController@cari');
+
+Route::get('/pages/cari','OrderController@viewcari');
 

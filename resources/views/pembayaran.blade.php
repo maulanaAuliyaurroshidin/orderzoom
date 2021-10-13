@@ -20,7 +20,7 @@
                     <div class="row justify-content-center">
                             
                     <a href="/order/uploadbukti/{{$p}}" style="margin-bottom : 5px;" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Upload Bukti Sekarang</a>
-                    <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Upload Nanti</a>
+                    <a href="/session/delete" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Upload Nanti</a>
                         </form>
 
                         <!-- <div class="form-group">

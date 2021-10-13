@@ -49,7 +49,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="d-flex flex-column text-center text-lg-start bg-dark text-muted fixed-bottom">
+<footer class="d-flex flex-column text-center text-lg-start bg-dark text-muted">
 
   <!-- Section: Links  -->
   <section class="">
