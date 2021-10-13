@@ -18,11 +18,14 @@
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
                     <p>
                     <div class="row justify-content-center">
+                        <form action="/order/upload/{{$p}}" method="POST">
+                        {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="images">Upload Bukti</label>
-                            <input type="file" name="images[]" id='images' class="form-control w-50 m-auto">
+                            <input type="hidden" name="id" value="{{$p}}">
+                            <input type="file" name="bukti" id='images' class="form-control w-50 m-auto">
                             </div>
-                            <input type="submit" class="btn btn-success" style="margin-top:5px;" value="Upload" />
+                            <input action= "/order/upload/{{$p}}"type="submit" class="btn btn-success" style="margin-top:5px;" value="Upload" />
                         </form>
 
                         <!-- <div class="form-group">

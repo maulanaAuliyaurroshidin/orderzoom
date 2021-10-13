@@ -29,4 +29,5 @@ Route::get('/session/delete', 'OrderController@deleteSessionData');
 
 Route::get('/order/uploadbukti/{id}', 'OrderController@uploadbukti');
 
+Route::post('/order/upload/{id}', 'OrderController@upload');
 
