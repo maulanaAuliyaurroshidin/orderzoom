@@ -1,14 +1,16 @@
 @extends('layout.template')
 
 @section('content')
+
 <div class="container-fluid">
     <div class="row">
         <section>
             <div class="container py-4">
+
                 <form action="/order/save" method="POST">
                 {{ csrf_field() }} 
                     <div class="row justify-content-center">
-                        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                        <div class="col-12 col-md-8 col-lg-8 col-xl-6 shadow p-3 mb-5 rounded">
                             <div class="row">
                                 <div class="col text-center">
                                     <h1>Form Pemesanan</h1>
@@ -18,6 +20,7 @@
                                         Vokalia and Consonantia.</p> -->
                                 </div>
                             </div>
+
                             <div class="row align-items-center">
                                 <div class="col mt-4">
                                     <label class="form-label">Nama</label>
@@ -51,7 +54,7 @@
                             <div class="row align-items-center">
                                 <div class="col mt-4">
                                     <label class="form-label">Tanggal Peminjaman</label>
-                                    <input type="text" class="form-control date" name="tanggal" id="datepicker" required>
+                                    <input type="text" class="form-control date" name="tanggal" id="datepicker" required readonly>
                                 </div>
                                 <script type="text/javascript">
 

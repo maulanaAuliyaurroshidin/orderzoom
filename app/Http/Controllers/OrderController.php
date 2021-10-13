@@ -60,7 +60,7 @@ class OrderController extends Controller {
             public function deleteSessionData(Request $request)
             {
                 session()->forget('kde');
-                echo 'delete';
+                return redirect('/');
             }
             public function uploadbukti($id)
             { 

@@ -24,7 +24,7 @@ Route::post('/order/save', 'OrderController@save');
 Route::get('/order/pembayaran', 'OrderController@pembayaran');
 Route::get('/session/set', 'OrderController@storeSessionData');
 Route::get('/session/get', 'OrderController@getSessionData');
-Route::get('/session/delete', 'OrderController@deleteSessionData');
+Route::get('/upload/nanti/', 'OrderController@deleteSessionData');
 
 Route::get('/order/uploadbukti/{id}', 'OrderController@uploadbukti');
 
