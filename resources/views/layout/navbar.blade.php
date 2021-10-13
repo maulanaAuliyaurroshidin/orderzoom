@@ -22,7 +22,7 @@
                 <a class="nav-link" href="/pages/klien">Klien</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="/pages/cari">Pesanan Saya</a>
+                <a class="nav-link"  href="/pages/cari">Cari Pesanan</a>
             </li>
         </ul>
     </div>

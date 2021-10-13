@@ -9,7 +9,7 @@
                     <h4>Pembayaran</h4> Silahkan transfer pembayaran ke rekening dibawah ini<br>dan upload bukti pembayaran
                 </div>
                 <div class="card-body text-center">
-                    <div class="alert alert-danger mt-0"><strong>Peringatan</strong>, Jangan reload halaman pembayaran ini. secara otomatis akan diarahkan ke halaman utama.</div>
+                    <div class="alert alert-danger mt-0"><strong>Peringatan</strong>, Pastikan data dibawah adalah benar pesanan anda.</div>
                     <h5 class="card-title">123123123</h5>
                     <h6 class="card-subtitle mb-2 text-muted">A/N PT.Radnet Digital Indonesia</h6>
                     <p class="card-text">Mandiri Syariah</p>

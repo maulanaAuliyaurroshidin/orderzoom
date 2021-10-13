@@ -50,7 +50,7 @@
 </body>
 
 <!-- Footer -->
-<footer class="d-flex flex-column text-center text-lg-start bg-dark text-muted shadow p-3 mb-5">
+<footer class="d-flex flex-column text-center text-lg-start bg-dark text-muted">
 
   <!-- Section: Links  -->
   <section class="">
