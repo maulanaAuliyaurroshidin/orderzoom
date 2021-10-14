@@ -33,10 +33,14 @@
                                     <input type="email" class="form-control" placeholder="Alamat Email" name="email" required>
                                 </div>
                             </div>
-                            <div class="row align-items-center mt-4">
-                                <div class="col">
-                                    <label class="form-label">No. Telp</label>
-                                    <input type="text" class="form-control" placeholder="Nomor Telepon" name="telp" required>
+                            <p>
+                            <div class="col-mt-4">
+                                <label for="validationDefaultUsername">No. Telp</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend2">+62</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Nomor Telepon" name="telp" required>
                                 </div>
                             </div>
                             <div class="row align-items-center mt-4">

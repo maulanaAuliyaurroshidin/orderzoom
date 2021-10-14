@@ -66,7 +66,7 @@ class OrderController extends Controller {
             { 
                 
                 $kode_pesan = array('p'=>session()->get('kde'));
-                $db = DB::table('pesan')->where('id',$id)->get(); 
+                $db = DB::table('pesan')->join('kategori', 'pesan.id_ktgr', '=', 'kategori.id_kategori')->where('id',$kode_pesan)->get(); 
 
                 foreach($db as $k)
                 {
@@ -90,7 +90,7 @@ class OrderController extends Controller {
             public function cari(Request $request)
             {
                 $cari = $request->cari;
-                    $pesan= DB::table('pesan')
+                    $pesan= DB::table('pesan')->join('kategori', 'pesan.id_ktgr', '=', 'kategori.id_kategori')
                     ->where('id','like',"%".$cari."%")
                     ->get();
                     $pp = array('p'=>$cari);

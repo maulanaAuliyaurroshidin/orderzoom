@@ -14,29 +14,9 @@
                     <h6 class="card-subtitle mb-2 text-muted">A/N PT.Radnet Digital Indonesia</h6>
                     <p class="card-text">Mandiri Syariah</p>
 
-                    <form>
-                    <div class="form-group row justify-content-center">
-                        <label style="text-align:left;" for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
-                        <label style="text-align:center;" for="staticEmail" class="col-sm-1 col-form-label">:</label>
-                        <div class="col-sm-6">
-                        <input style="text-align:right;background: #eee;border-radius: 20px;" type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{$k->nama}}  ">
-                        </div>
-                    </div>
-                    <div class="form-group row justify-content-center" style="margin-top:5px;">
-                        <label style="text-align:left;" for="staticEmail" class="col-sm-2 col-form-label">Paket</label>
-                        <label style="text-align:center;" for="staticEmail" class="col-sm-1 col-form-label">:</label>
-                        <div class="col-sm-6">
-                        <input style="text-align:right;right;background: #eee;border-radius: 20px;" type="text" readonly class="form-control-plaintext" id="staticEmail" value="Paket Zoom {{$k->jenis}} {{$k->kapasitas}}  ">
-                        </div>
-                    </div>
-                    <div class="form-group row justify-content-center" style="margin-top:5px;">
-                        <label style="text-align:left;" for="staticEmail" class="col-sm-2 col-form-label">Harga</label>
-                        <label style="text-align:center;" for="staticEmail" class="col-sm-1 col-form-label">:</label>
-                        <div class="col-sm-6">
-                        <input style="text-align:right;right;background: #eee;border-radius: 20px;" type="text" readonly class="form-control-plaintext" id="staticEmail" value="Rp.{{$k->harga}}  ">
-                        </div>
-                    </div>
-                    </form>
+                    <p class="lead">Nama <strong>{{$k->nama}} </strong></p>
+                    <p class="lead">Paket Zoom <strong>{{$k->jenis}} {{$k->kapasitas}} </strong></p>
+                    <p class="lead">Harga <strong>Rp.{{$k->harga}} </strong></p>
                     <p>
                     <p class="lead">Kode Pembayaran <strong>{{$k->id}}</strong></p>
                     <p>Jika sudah melakukan transfer, segera<br> mengunggah bukti transfer</p>
