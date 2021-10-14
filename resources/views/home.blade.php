@@ -57,78 +57,30 @@
   <div class="pricing-container">
     <div class="panel pricing-table">
 
+    @foreach($s as $p)
+    @if($p->jenis == 'meeting')
       <div class="pricing-plan">
         <div class="pricing-header">
-          <h6 class="pricing-tag">Pro</h6>
+          <h6 class="pricing-tag">{{$p->nama_ktgr}}</h6>
           <h5>Zoom Meeting</h5>
-          <h2 class="pricing-type">100</h2>
+          <h2 class="pricing-type">{{$p->kapasitas}}</h2>
         </div>
         <ul class="pricing-features">
-          <li class="pricing-features-item">100 participants</li>
+          <li class="pricing-features-item">{{$p->kapasitas}} participants</li>
           <li class="pricing-features-item">Group meetings</li>
           <li class="pricing-features-item">Social media streaming</li>
           <li class="pricing-features-item">Private & Group Chat</li>
         </ul>
-        <span class="pricing-price">*Call for price</span>
+        <span class="pricing-price">Rp. {{$p->harga}}</span>
         <p class="pricing-detail">*Harga sudah termasuk PPN 10%</p>
-        <a href="/order" class="pricing-button">Pesan Sekarang</a>
+        <a href="/order/{{$p->id_kategori}}" class="pricing-button">Pesan Sekarang</a>
       </div>
-
-      <div class="pricing-plan">
-        <div class="pricing-header">
-          <h6 class="pricing-tag">Business</h6>
-          <h5>Zoom Meeting</h5>
-          <h2 class="pricing-type">300</h2>
-        </div>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">300 participants</li>
-          <li class="pricing-features-item">Single sign-on</li>
-          <li class="pricing-features-item">Recording transcript</li>
-          <li class="pricing-features-item">Private & Group Chat</li>
-        </ul>
-        <span class="pricing-price">Rp165.000</span>
-        <p class="pricing-detail">.</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20meeting%20300%20peserta" class="pricing-button">Pesan Sekarang</a>
-      </div>
-
-
-      <div class="pricing-plan">
-        <div class="pricing-header">
-          <h6 class="pricing-tag">Enterprise</h6>
-          <h5>Zoom Meeting</h5>
-          <h2 class="pricing-type">500</h2>
-        </div>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">500 participants</li>
-          <li class="pricing-features-item">Unlimited cloud storage</li>
-          <li class="pricing-features-item">Recording transcripts</li>
-          <li class="pricing-features-item">.</li>
-        </ul>
-        <span class="pricing-price">*Call for price</span>
-        <p class="pricing-detail">.</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20meeting%20500%20peserta" class="pricing-button">Pesan Sekarang</a>
-      </div>
-      
-       <div class="pricing-plan">
-        <div class="pricing-header">
-          <h6 class="pricing-tag">Enterprise Plus</h6>
-          <h5>Zoom Meeting</h5>
-          <h2 class="pricing-type">1000</h2>
-        </div>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">1000 participants</li>
-          <li class="pricing-features-item">Unlimited cloud storage</li>
-          <li class="pricing-features-item">Recording transcripts</li>
-          <li class="pricing-features-item">.</li>
-        </ul>
-        <span class="pricing-price">*Call for price</span>
-        <p class="pricing-detail">.</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20meeting%201000%20peserta" class="pricing-button">Pesan Sekarang</a>
-      </div>
-
+      @endif
+@endforeach
     </div>
   </div>
 </div>
+
 
 
 <div class="d-flex justify-content-center"><p class="text-center" style="background: #131c24;
@@ -141,57 +93,26 @@
   <div class="pricing-container">
     <div class="panel pricing-table">
 
+    @foreach($s as $p)
+    @if($p->jenis == 'webinar')
       <div class="pricing-plan">
         <div class="pricing-header">
-          <h6 class="pricing-tag">Pro</h6>
+          <h6 class="pricing-tag">{{$p->nama_ktgr}}</h6>
           <h5>Zoom Webinar</h5>
-          <h2 class="pricing-type">100</h2>
+          <h2 class="pricing-type">{{$p->kapasitas}}</h2>
         </div>
         <ul class="pricing-features">
-          <li class="pricing-features-item">100 participants</li>
+          <li class="pricing-features-item">{{$p->kapasitas}} participants</li>
           <li class="pricing-features-item">Group meetings</li>
           <li class="pricing-features-item">Social media streaming</li>
           <li class="pricing-features-item">Private & Group Chat</li>
         </ul>
-        <span class="pricing-price">*Call for price</span>
+        <span class="pricing-price">Rp. {{$p->harga}}</span>
         <p class="pricing-detail">*Harga sudah termasuk PPN 10%</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20webinar%20100%20peserta" class="pricing-button">Pesan Sekarang</a>
+        <a href="/order/{{$p->id_kategori}}" class="pricing-button">Pesan Sekarang</a>
       </div>
-
-      <div class="pricing-plan">
-        <div class="pricing-header">
-          <h6 class="pricing-tag">Business</h6>
-          <h5>Zoom Webinar </h5>
-          <h2 class="pricing-type">500</h2>
-        </div>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">300 participants</li>
-          <li class="pricing-features-item">Single sign-on</li>
-          <li class="pricing-features-item">Recording transcript</li>
-          <li class="pricing-features-item">Private & Group Chat</li>
-        </ul>
-        <span class="pricing-price">*Call for price</span>
-        <p class="pricing-detail">.</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20webinar%20500%20peserta" class="pricing-button">Pesan Sekarang</a>
-      </div>
-
-
-      <div class="pricing-plan">
-        <div class="pricing-header">
-          <h6 class="pricing-tag">Enterprise</h6>
-          <h5>Zoom Webinar</h5>
-          <h2 class="pricing-type">1000</h2>
-        </div>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">500 participants</li>
-          <li class="pricing-features-item">Unlimited cloud storage</li>
-          <li class="pricing-features-item">Recording transcripts</li>
-          <li class="pricing-features-item">.</li>
-        </ul>
-        <span class="pricing-price">*Call for price</span>
-        <p class="pricing-detail">.</p>
-        <a href="https://api.whatsapp.com/send?phone=628155044434&text=Permisi%2C%20saya%20mau%20order%20paket%20zoom%20webinar%201000%20peserta" class="pricing-button">Pesan Sekarang</a>
-      </div>
+      @endif
+@endforeach
 
     </div>
   </div>

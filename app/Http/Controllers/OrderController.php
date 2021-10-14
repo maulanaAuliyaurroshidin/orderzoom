@@ -24,6 +24,7 @@ class OrderController extends Controller {
                     'instansi' => $request->instansi,
                     'alamat' => $request->alamat,
                     'tanggal' => $request->tanggal,
+                    'id_ktgr' => $request->id_kategori,
                     'id' => $id
                 ]);
                 
@@ -85,11 +86,7 @@ class OrderController extends Controller {
                 session()->forget('kde');
                 return view('uploadberhasil');
             }
-            public function order()
-            {
-                $tgl = DB::table('pesan')->whereNotNull('tanggal')->get();
-                return view('order',['tanggal' => $tgl]);
-            }
+            
 
             public function cari(Request $request)
             {
@@ -113,4 +110,5 @@ class OrderController extends Controller {
                 $kode_pesan = array('p'=>session()->get('kde'));
                 return view('pencarian')->with($kode_pesan);
             }
+            
 }

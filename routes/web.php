@@ -13,10 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/order', 'OrderController@order');
+Route::get('/', 'HomeController@ktgr');
+
+Route::get('/order/{id}', 'HomeController@order');
 
 Route::post('/order/save', 'OrderController@save');
 

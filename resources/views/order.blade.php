@@ -13,13 +13,15 @@
                         <div class="col-12 col-md-8 col-lg-8 col-xl-6">
                             <div class="row">
                                 <div class="col text-center">
+                                @foreach($kategori as $p)
                                     <h1>Form Pemesanan</h1>
-                                
+                                <h3>Zoom {{$p->jenis}} {{$p->nama_ktgr}}<br>{{$p->kapasitas}} Peserta</h3>
                                 
                                     <!-- <p class="text-h3">Far far away, behind the word mountains, far from the countries
                                         Vokalia and Consonantia.</p> -->
                                 </div>
                             </div>
+
 
                             <div class="row align-items-center">
                                 <div class="col mt-4">
@@ -56,6 +58,24 @@
                                     <label class="form-label">Tanggal Peminjaman</label>
                                     <input type="text" class="form-control date" name="tanggal" id="datepicker" required readonly>
                                 </div>
+                                
+                            <div style="display:none" class="row align-items-center">
+                                <div class="col mt-4">
+                                    <label class="form-label">id</label>
+                                    <input type="text" class="form-control" placeholder="Nama Lengkap" name="id_kategori" value="{{$p->id_kategori}}" required>
+                                </div>
+                            </div>
+                            <p>
+                            <div class="col-mt-4">
+                                <label for="validationDefaultUsername">Harga</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend2">Rp.</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="validationDefaultUsername" value="{{$p->harga}}" aria-describedby="inputGroupPrepend2" required readonly>
+                                </div>
+                                </div>
+                            @endforeach
                                 <script type="text/javascript">
 
                                 <?php 
