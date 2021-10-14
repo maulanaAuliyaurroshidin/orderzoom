@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow p-3 mb-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow p-3">
     <div class="container">
         <a class="navbar-brand"  href="/"><img style ="height : 60px;" src="/img/meeton2.png" alt=""></a>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

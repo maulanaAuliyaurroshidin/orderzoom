@@ -8,19 +8,17 @@
             <div class="container py-4">
 
                 <form action="/order/save" method="POST">
-                {{ csrf_field() }} 
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
-                            <div class="row">
-                                <div class="col text-center">
-                                @foreach($kategori as $p)
-                                    <h1>Form Pemesanan</h1>
-                                <h3>Zoom {{$p->jenis}} {{$p->nama_ktgr}}<br>{{$p->kapasitas}} Peserta</h3>
-                                
-                                    <!-- <p class="text-h3">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia.</p> -->
-                                </div>
-                            </div>
+                     {{ csrf_field() }} 
+                         <div class="row justify-content-center">
+                             <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+                                 <div class="row">
+                                     <div class="col text-center">
+                                         @foreach($kategori as $p)
+                                            <h1>Form Pemesanan</h1>
+                                            <h3>Zoom {{$p->jenis}} {{$p->nama_ktgr}}<br>{{$p->kapasitas}} Peserta</h3>
+                            
+                                            </div>
+                                    </div>
 
 
                             <div class="row align-items-center">
@@ -74,8 +72,10 @@
                                     </div>
                                     <input type="text" class="form-control" id="validationDefaultUsername" value="{{$p->harga}}" aria-describedby="inputGroupPrepend2" required readonly>
                                 </div>
-                                </div>
-                            @endforeach
+                            </div>
+                                @endforeach
+                            </div>
+                            
                                 <script type="text/javascript">
 
                                 <?php 
@@ -99,11 +99,7 @@
                                 }
                             });
                                 </script>
-                            </div>
-
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
-
-     
                         </div>
                     </div>
                 </form>

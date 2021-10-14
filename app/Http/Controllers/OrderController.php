@@ -30,18 +30,17 @@ class OrderController extends Controller {
                 
                 $kode_pesan = array('p'=>session()->get('kde'));
                 session()->put('kde', with($kode['kd']));
-                return redirect('order/pembayaran');
+                return redirect('bayar/pembayaran');
 
                 
             }
             public function pembayaran(Request $request)
             {
                 $kode_pesan = array('p'=>session()->get('kde'));
-                $db = DB::table('pesan')->where('id',$kode_pesan)->get();
+                $db = DB::table('pesan')->join('kategori', 'pesan.id_ktgr', '=', 'kategori.id_kategori')->where('id',$kode_pesan)->get();
                 foreach($db as $k)
                 {
                     $k = array('k'=>$k);
-                    
                 }
                 //dd($k);
                 return view('pembayaran')->with($k)->with($kode_pesan);

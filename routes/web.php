@@ -20,7 +20,7 @@ Route::get('/order/{id}', 'HomeController@order');
 Route::post('/order/save', 'OrderController@save');
 
 
-Route::get('/order/pembayaran', 'OrderController@pembayaran');
+Route::get('/bayar/pembayaran', 'OrderController@pembayaran');
 Route::get('/session/set', 'OrderController@storeSessionData');
 Route::get('/session/get', 'OrderController@getSessionData');
 Route::get('/upload/nanti/', 'OrderController@deleteSessionData');
