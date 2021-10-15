@@ -33,6 +33,7 @@
                                     <input type="email" class="form-control" placeholder="Alamat Email" name="email" required>
                                 </div>
                             </div>
+                            <p><small>Pastikan email aktif. Email digunakan untuk pengiriman data zoom</small></p>
                             <p>
                             <div class="col-mt-4">
                                 <label for="validationDefaultUsername">No. Telp</label>
@@ -43,6 +44,7 @@
                                     <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Nomor Telepon" name="telp" required>
                                 </div>
                             </div>
+                            <p><small>Pastikan nomor telepon aktif. Nomor digunakan untuk pengiriman data zoom</small></p>
                             <div class="row align-items-center mt-4">
                                 <div class="col">
                                     <label class="form-label">Instansi</label>
@@ -103,6 +105,14 @@
                                 }
                             });
                                 </script>
+                                <button class="btn btn-secondary btn-block mt-3 hBack" type="button">Kembali</button>
+
+<script type="text/javascript">
+$(".hBack").on("click", function(e){
+e.preventDefault();
+window.history.back();
+});
+</script>
                             <button class="btn btn-primary btn-block mt-3" type="submit">Submit</button>
                         </div>
                     </div>
