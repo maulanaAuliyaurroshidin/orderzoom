@@ -34,3 +34,9 @@ Route::get('/cari/pesanan','OrderController@cari');
 
 Route::get('/pages/cari','OrderController@viewcari');
 
+//admin
+Route::get('/admin', 'AdminController@dashboard');
+
+Route::get('/list','AdminController@view');
+Route::get('/baru','AdminController@baru');
+Route::get('/selesai','AdminController@selesai');

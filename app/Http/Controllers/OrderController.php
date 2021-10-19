@@ -78,9 +78,18 @@ class OrderController extends Controller {
             }
             public function upload(Request $request)
             { 
+                
                 DB::table('pesan')->where('id',$request->id)->update([
                     'bukti' => $request->bukti,
-                ]); 
+                    
+                ]);$request->validate([
+                    'bukti' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                ]);
+          
+                $imageName = time().'.'.$request->image->extension();  
+           
+                $request->image->move(public_path('images'), $imageName);
+           ; 
                 //dd($request->all());
                 session()->forget('kde');
                 return view('uploadberhasil');
