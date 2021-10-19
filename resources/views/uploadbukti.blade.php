@@ -43,7 +43,7 @@
                     </form>
                     <p>
                     <div class="row justify-content-center">
-                        <form action="/order/upload/{{$p}}" method="POST">
+                        <form action="/order/upload/{{$p}}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
                         @if($k->bukti == null)
@@ -52,7 +52,7 @@
                             <input type="hidden" name="id" value="{{$p}}">
                             <input type="file" name="bukti" id='images' class="form-control w-50 m-auto">
                             </div>
-                            <input action= "/order/upload/{{$p}}"type="submit" class="btn btn-success" style="margin-top:5px;" value="Upload" />
+                            <input type="submit" class="btn btn-success" style="margin-top:5px;" value="Upload" />
                         @else
                         @endif
 

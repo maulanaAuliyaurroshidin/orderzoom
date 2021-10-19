@@ -78,9 +78,13 @@ class OrderController extends Controller {
             }
             public function upload(Request $request)
             { 
-                DB::table('pesan')->where('id',$request->id)->update([
-                    'bukti' => $request->bukti,
-                ]); 
+                $path = $request->file('bukti')->store('kntl');
+                dd($path);
+
+
+                //DB::table('pesan')->where('id',$request->id)->update([
+                  //  'bukti' => $request->bukti,
+                //]); 
                 //dd($request->all());
                 session()->forget('kde');
                 return view('uploadberhasil');
