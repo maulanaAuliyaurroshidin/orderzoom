@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
 
                     <li class="nav-item">
-                        <a class="nav-link  <?php if ($title == 'Dashboard') echo 'active' ?>" href="<?= base_url('pages/dashboard'); ?>">
+                        <a class="nav-link " href="/admin" >
                             <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>
@@ -38,27 +38,6 @@
 
                     </div>
 
-                    <!-- <li class="nav-item">
-                        <a class="nav-link collapsed <?php if ($title == 'Tambah Transaksi') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_transaksi'); ?>">
-                            <i class="fas fa-plus"></i>
-                            <span> </span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link collapsed <?php if ($title == 'Transaksi') echo 'active' ?>" href="<?= base_url('/pemilik/transaksi'); ?>">
-                            <i class="fas fa-fw fa-dollar-sign"></i>
-                            <span></span>
-                        </a>
-                    </li> -->
-
-                    <!-- 
-                    <li class="nav-item">
-                        <a class="nav-link collapsed <?php if ($title == 'Pengeluaran') echo 'active' ?>" href="<?= base_url('/pemilik/pengeluaran'); ?>">
-                            <i class="fas fa-fw fa-arrow-down"></i>
-                            <span>Pengeluaran</span>
-                        </a>
-                    </li> -->
 
                     <hr class="sidebar-divider">
 
@@ -67,15 +46,15 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php if ($title == 'Data Pesanan') echo 'active' ?>" href="<?= base_url('pages/datapesanan'); ?>">
-                            <i class="fas fa-fw fa-plus"></i>Data Pesanan
+                        <a class="nav-link " href="/list">
+                            <i class="fas fa-fw fa-plus" ></i>Data Pesanan
                             <span></span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php if ($title == 'List Barang') echo 'active' ?>" href="<?= base_url('/pemilik/list_barang'); ?>">
-                            <i class="fas fa-fw fa-plus"></i>Stock Zoom
+                        <a class="nav-link " href="/baru">
+                            <i class="fas fa-fw fa-plus"></i>Pesanan Baru
                             <span></span>
                         </a>
                     </li>
@@ -88,23 +67,18 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link <?php if ($title == 'Tambah Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/tambah_pegawai'); ?>">
+                        <a class="nav-link " href="/selesai">
                             <i class="fas fa-fw fa-clipboard-list"></i>Transaksi Selesai
                             <span></span>
                         </a>
                     </li>
 
-                    <!-- <li class="nav-item">
-                        <a class="nav-link <?php if ($title == 'List Pegawai') echo 'active' ?>" href="<?= base_url('/pemilik/list_pegawai'); ?>">
-                            <i class="fas fa-fw fa-clipboard-list"></i>Data Penjualan
-                            <span></span>
-                        </a>
-                    </li> -->
+            
 
                     <hr class="sidebar-divider">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('/login/logout'); ?>">
+                        <a class="nav-link" >
                             <i class="fas fa-fw fa-sign-out-alt"></i>
                             <span>Logout</span>
                         </a>
@@ -128,7 +102,7 @@
                             <li class="nav-item dropdown no-arrow">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Admin</span></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in">
-                                        <a class="dropdown-item" href="<?= base_url('/'); ?>"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <a class="dropdown-item" href=""><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
                             </li>
@@ -136,7 +110,7 @@
                     </div>
                 </nav>
 
-                <?= $this->renderSection('contentadmin') ?>
+                @yield('contentadmin')
 
             </div>
             <footer class="bg-white sticky-footer">
