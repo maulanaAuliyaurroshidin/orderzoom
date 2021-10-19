@@ -78,13 +78,20 @@ class OrderController extends Controller {
             }
             public function upload(Request $request)
             { 
-                $path = $request->file('bukti')->store('kntl');
-                dd($path);
+                //$path = $request->file('bukti');
+                //$path->store('toPath', ['disk'=>'my_files']);
 
+                $path = $request->file('bukti');
+                $input['imagename'] = time() . '.' . $path->getClientOriginalExtension();
+                $dest = public_path('/images');
+                $path->move($dest, $input['imagename']);
+                $link = '/images'.'/'.$input['imagename'];
 
-                //DB::table('pesan')->where('id',$request->id)->update([
-                  //  'bukti' => $request->bukti,
-                //]); 
+                //dd($link);
+
+                DB::table('pesan')->where('id',$request->id)->update([
+                'bukti' => $link,
+                ]); 
                 //dd($request->all());
                 session()->forget('kde');
                 return view('uploadberhasil');
