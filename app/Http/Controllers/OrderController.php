@@ -82,7 +82,7 @@ class OrderController extends Controller {
                 //$path->store('toPath', ['disk'=>'my_files']);
 
                 $path = $request->file('bukti');
-                $input['imagename'] = time() . '.' . $path->getClientOriginalExtension();
+                $input['imagename'] = $request->id .'_'. time() . '.' . $path->getClientOriginalExtension();
                 $dest = public_path('/images');
                 $path->move($dest, $input['imagename']);
                 $link = '/images'.'/'.$input['imagename'];

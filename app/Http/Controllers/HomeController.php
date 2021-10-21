@@ -10,7 +10,7 @@ class HomeController extends Controller {
     public function order($id)
             {
                 $ktgr = DB::table('kategori')->where('id_kategori', $id)->get();
-                $tgl = DB::table('pesan')->whereNotNull('tanggal')->get();
+                $tgl = DB::table('pesan')->whereNotNull('tanggal')->whereNotNull('bukti')->get();
                 //dd($db);
                 return view('order',['kategori' => $ktgr])->with(['tanggal' => $tgl]);
             }
